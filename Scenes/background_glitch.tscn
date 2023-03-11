@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm5eokat4kc21"]
+
+[ext_resource type="Shader" path="res://Shaders/background_glitch.gdshader" id="1_5b1vv"]
+[ext_resource type="Shader" path="res://Shaders/stars.gdshader" id="1_ew837"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s2a0u"]
+shader = ExtResource("1_ew837")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tohul"]
+shader = ExtResource("1_5b1vv")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = -1
+
+[node name="Background Glitch" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stars" type="ColorRect" parent="Background Glitch"]
+material = SubResource("ShaderMaterial_s2a0u")
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 414.0
+color = Color(0.207843, 0.00784314, 0.00784314, 1)
+
+[node name="ShaderRect" type="ColorRect" parent="Background Glitch"]
+material = SubResource("ShaderMaterial_tohul")
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 414.0

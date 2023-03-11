@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cocmrajyae201" path="res://Assets/Platformer/Characters/character_0000.png" id="1_fga7m"]
 [ext_resource type="Texture2D" uid="uid://bc2d22he7ejjq" path="res://Assets/Platformer/Characters/character_0001.png" id="2_kwtwe"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o51es"]
-radius = 9.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qrwqg"]
+radius = 7.0
+height = 24.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5ljlt"]
 animations = [{
@@ -29,9 +30,10 @@ animations = [{
 }]
 
 [node name="PlayerReUse" type="CollisionShape2D"]
-shape = SubResource("CircleShape2D_o51es")
+shape = SubResource("CapsuleShape2D_qrwqg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_5ljlt")
 animation = &"Run"
 frame_progress = 0.285075
