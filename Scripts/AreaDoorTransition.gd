@@ -4,8 +4,8 @@ extends Area2D
 @export var change_to_chill: bool
 @export var change_to_mad: bool
 
-@onready var camera = get_node("../Camera2D")
-@onready var left_side_wall = get_node("../StaticBody2D/CollisionShape2D")
+@onready var camera = get_node("../../Camera2D")
+@onready var left_side_wall = get_node("../../StaticBody2D/CollisionShape2D")
 
 func _on_body_entered(_body):
 	
@@ -15,6 +15,6 @@ func _on_body_entered(_body):
 		BackgroundMusic.loud()
 	
 	camera.position = new_camera_position
-	var tween = get_tree().create_tween()
+	var tween = create_tween()
 	tween.tween_property(left_side_wall, "position", new_camera_position, 1)
 	queue_free()

@@ -2,14 +2,21 @@ extends Node
 
 var chill_music
 var loud_music
+var high_pass
+
+const TRANS_SEC = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	chill_music = AudioStreamPlayer.new()
 	loud_music = AudioStreamPlayer.new()
 	
+	high_pass = AudioEffectHighPassFilter.new()
+	high_pass.cutoff_hz = 750
+	AudioServer.add_bus_effect(0, high_pass)
+	
 	chill_music.stream = load("res://Assets/Music/Jazz Non-combat.wav")
-	chill_music.volume_db = -80
+	chill_music.volume_db = 0
 	add_child(chill_music)
 	
 	loud_music.stream = load("res://Assets/Music/Combat Theme Loop.wav")
@@ -20,19 +27,20 @@ func _ready():
 	loud_music.play(chill_music.get_playback_position())
 
 func chill():
-	var tween = get_tree().create_tween()
-	tween.tween_property(chill_music, "volume_db", 0, 2)
-	var tween2 = get_tree().create_tween()
-	tween2.tween_property(loud_music, "volume_db", -80, 2)
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(chill_music, "volume_db", 0, TRANS_SEC)
+	tween.tween_property(loud_music, "volume_db", -80, TRANS_SEC)
+	tween.tween_property(high_pass, "cutoff_hz", 20, TRANS_SEC)
 
 func loud():
-	var tween = get_tree().create_tween()
-	tween.tween_property(chill_music, "volume_db", -80, 2)
-	var tween2 = get_tree().create_tween()
-	tween2.tween_property(loud_music, "volume_db", 0, 2)
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(chill_music, "volume_db", -80, TRANS_SEC)
+	tween.tween_property(loud_music, "volume_db", 0, TRANS_SEC)
 
 func shut_up():
-	var tween = get_tree().create_tween()
-	tween.tween_property(chill_music, "volume_db", -80, 2)
-	var tween2 = get_tree().create_tween()
-	tween2.tween_property(loud_music, "volume_db", -80, 2)
+	var tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(chill_music, "volume_db", -80, TRANS_SEC)
+	tween.tween_property(loud_music, "volume_db", -80, TRANS_SEC)
