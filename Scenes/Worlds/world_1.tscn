@@ -1155,6 +1155,15 @@ text = "   W
 A S D"
 autowrap_mode = 0
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 1233.0
+offset_top = 360.0
+offset_right = 1251.0
+offset_bottom = 396.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "E"
+autowrap_mode = 0
+
 [connection signal="body_entered" from="Transitions/ROOM1" to="Transitions/ROOM1" method="_on_body_entered"]
 [connection signal="body_entered" from="Transitions/ROOM2" to="Transitions/ROOM2" method="_on_body_entered"]
 [connection signal="body_entered" from="Transitions/ROOM3" to="Transitions/ROOM3" method="_on_body_entered"]

@@ -1078,7 +1078,6 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_2je64")
 new_camera_position = Vector2(540, 0)
-change_to_tense = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM1"]
 position = Vector2(531, 207)
@@ -1101,7 +1100,7 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_2je64")
 new_camera_position = Vector2(1620, 0)
-change_to_mad = true
+change_to_tense = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM3"]
 position = Vector2(531, 207)
