@@ -1,3 +1,217 @@
-[gd_scene format=3 uid="uid://bu2wtvs0i52e5"]
+[gd_scene load_steps=52 format=3 uid="uid://bu2wtvs0i52e5"]
 
-[node name="LavaWall" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dy0ak4klxu10j" path="res://Assets/Lava Tiles/10001.png" id="1_n4rb8"]
+[ext_resource type="Shader" path="res://Shaders/lava_wall.gdshader" id="1_s2bc0"]
+[ext_resource type="Texture2D" uid="uid://dtr3hhdhgyjsi" path="res://Assets/Lava Tiles/10002.png" id="2_ix0ax"]
+[ext_resource type="Texture2D" uid="uid://dti0vokk0cu05" path="res://Assets/Lava Tiles/10003.png" id="3_aqim0"]
+[ext_resource type="Texture2D" uid="uid://dwmsxk68yyjry" path="res://Assets/Lava Tiles/10004.png" id="4_yjnp7"]
+[ext_resource type="Texture2D" uid="uid://cka0kcmhgikxs" path="res://Assets/Lava Tiles/10005.png" id="5_s0a07"]
+[ext_resource type="Texture2D" uid="uid://dsphjy6c88cer" path="res://Assets/Lava Tiles/10006.png" id="6_i1gbt"]
+[ext_resource type="Texture2D" uid="uid://c2fyrm3r3cwm7" path="res://Assets/Lava Tiles/10007.png" id="7_ul6y6"]
+[ext_resource type="Texture2D" uid="uid://dgx8qoq568dyv" path="res://Assets/Lava Tiles/10008.png" id="8_ns8vx"]
+[ext_resource type="Texture2D" uid="uid://bv82sqqb5huo7" path="res://Assets/Lava Tiles/10009.png" id="9_kfd1h"]
+[ext_resource type="Texture2D" uid="uid://s3i2lgbghi45" path="res://Assets/Lava Tiles/10010.png" id="10_msjoh"]
+[ext_resource type="Texture2D" uid="uid://jq0na81ijtq4" path="res://Assets/Lava Tiles/10011.png" id="11_f42yk"]
+[ext_resource type="Texture2D" uid="uid://cg5u7xqjnk1t" path="res://Assets/Lava Tiles/10012.png" id="12_s5yc2"]
+[ext_resource type="Texture2D" uid="uid://xmofnaartp53" path="res://Assets/Lava Tiles/10013.png" id="13_tm5il"]
+[ext_resource type="Texture2D" uid="uid://cy5mw4xyqbm3k" path="res://Assets/Lava Tiles/10014.png" id="14_7sl0h"]
+[ext_resource type="Texture2D" uid="uid://cceu77ovj0o5r" path="res://Assets/Lava Tiles/10015.png" id="15_0d3hm"]
+[ext_resource type="Texture2D" uid="uid://bwadqkrhrn07g" path="res://Assets/Lava Tiles/10016.png" id="16_enwee"]
+[ext_resource type="Texture2D" uid="uid://c7ghf0m17gmvh" path="res://Assets/Lava Tiles/10017.png" id="17_d50qv"]
+[ext_resource type="Texture2D" uid="uid://cc40ltw8pjc0i" path="res://Assets/Lava Tiles/10018.png" id="18_3ihdd"]
+[ext_resource type="Texture2D" uid="uid://dem44ycvl6cot" path="res://Assets/Lava Tiles/10019.png" id="19_6qqfl"]
+[ext_resource type="Texture2D" uid="uid://dwhuyflsqcmcm" path="res://Assets/Lava Tiles/10020.png" id="20_oqdy6"]
+[ext_resource type="Texture2D" uid="uid://cni3gsq1gcyqq" path="res://Assets/Lava Tiles/10021.png" id="21_l5eka"]
+[ext_resource type="Texture2D" uid="uid://qpx33ovbr5ib" path="res://Assets/Lava Tiles/10022.png" id="22_5367f"]
+[ext_resource type="Texture2D" uid="uid://chl581nh02wu4" path="res://Assets/Lava Tiles/10023.png" id="23_7aqv2"]
+[ext_resource type="Texture2D" uid="uid://bu8bsqq0g6wtk" path="res://Assets/Lava Tiles/10024.png" id="24_imwvx"]
+[ext_resource type="Texture2D" uid="uid://c53c1b3kq3tqo" path="res://Assets/Lava Tiles/10025.png" id="25_ljac1"]
+[ext_resource type="Texture2D" uid="uid://bqucth33ow6k0" path="res://Assets/Lava Tiles/10026.png" id="26_ncmko"]
+[ext_resource type="Texture2D" uid="uid://bbvkcqmbc316a" path="res://Assets/Lava Tiles/10027.png" id="27_dovsk"]
+[ext_resource type="Texture2D" uid="uid://cef673rtodqur" path="res://Assets/Lava Tiles/10028.png" id="28_ya4n2"]
+[ext_resource type="Texture2D" uid="uid://vhoe3jeb54f6" path="res://Assets/Lava Tiles/10029.png" id="29_uwo4o"]
+[ext_resource type="Texture2D" uid="uid://clnw5a0275lhi" path="res://Assets/Lava Tiles/10030.png" id="30_f6itp"]
+[ext_resource type="Texture2D" uid="uid://c6cff7ew5n8d3" path="res://Assets/Lava Tiles/10031.png" id="31_8qmfi"]
+[ext_resource type="Texture2D" uid="uid://c4ofnx5xga2ip" path="res://Assets/Lava Tiles/10032.png" id="32_x4mrb"]
+[ext_resource type="Texture2D" uid="uid://by5a3m73wg8jm" path="res://Assets/Lava Tiles/10033.png" id="33_bkb4o"]
+[ext_resource type="Texture2D" uid="uid://cave5cdkifbys" path="res://Assets/Lava Tiles/10034.png" id="34_tcxva"]
+[ext_resource type="Texture2D" uid="uid://34ee5fy2ck0h" path="res://Assets/Lava Tiles/10035.png" id="35_6eodn"]
+[ext_resource type="Texture2D" uid="uid://cda8133uhw2ex" path="res://Assets/Lava Tiles/10036.png" id="36_ma82t"]
+[ext_resource type="Texture2D" uid="uid://brd4oej6t5gf3" path="res://Assets/Lava Tiles/10037.png" id="37_nvgpe"]
+[ext_resource type="Texture2D" uid="uid://cq0iowfxyg533" path="res://Assets/Lava Tiles/10038.png" id="38_3nbyh"]
+[ext_resource type="Texture2D" uid="uid://d0hkgs41hwf6r" path="res://Assets/Lava Tiles/10039.png" id="39_bpmho"]
+[ext_resource type="Texture2D" uid="uid://d1a1j6j8bt3c3" path="res://Assets/Lava Tiles/10040.png" id="40_w7jy7"]
+[ext_resource type="Texture2D" uid="uid://r8yrgmjm06ok" path="res://Assets/Lava Tiles/10041.png" id="41_sdoom"]
+[ext_resource type="Texture2D" uid="uid://dc4anhpccfgra" path="res://Assets/Lava Tiles/10042.png" id="42_23o7v"]
+[ext_resource type="Texture2D" uid="uid://bi4mkjws1aiob" path="res://Assets/Lava Tiles/10043.png" id="43_oyv5v"]
+[ext_resource type="Texture2D" uid="uid://b7ur5ubj6x7gv" path="res://Assets/Lava Tiles/10044.png" id="44_srsjy"]
+[ext_resource type="Texture2D" uid="uid://ygaktfno7bhd" path="res://Assets/Lava Tiles/10045.png" id="45_dlrcl"]
+[ext_resource type="Script" path="res://Scripts/lava_wall.gd" id="47_ostb7"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_cd3qe"]
+noise_type = 3
+seed = 37
+frequency = 0.102
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_02q7b"]
+width = 540
+height = 414
+seamless = true
+noise = SubResource("FastNoiseLite_cd3qe")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7si2v"]
+shader = ExtResource("1_s2bc0")
+shader_parameter/saturation = 3.0
+shader_parameter/len = 0.0
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_02q7b")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilqbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n4rb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ix0ax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aqim0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yjnp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s0a07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i1gbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ul6y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ns8vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kfd1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_msjoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f42yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s5yc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tm5il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7sl0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0d3hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_enwee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_d50qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3ihdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6qqfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_oqdy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_l5eka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5367f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7aqv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_imwvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ljac1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ncmko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_dovsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ya4n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_uwo4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_f6itp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8qmfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x4mrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_bkb4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tcxva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6eodn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ma82t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_nvgpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_3nbyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_bpmho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_w7jy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_sdoom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_23o7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_oyv5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_srsjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_dlrcl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LavaWall" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_7si2v")
+position = Vector2(270, 207)
+scale = Vector2(16.875, 12.9375)
+sprite_frames = SubResource("SpriteFrames_ilqbi")
+frame_progress = 0.306958
+script = ExtResource("47_ostb7")

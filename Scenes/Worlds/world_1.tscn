@@ -1130,6 +1130,7 @@ sprite_frames = SubResource("SpriteFrames_440fx")
 position = Vector2(1350, 351)
 texture = ExtResource("11_uoq1j")
 script = ExtResource("12_b1j7i")
+new_pos = Vector2(1350, 414)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Door"]
 

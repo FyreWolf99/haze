@@ -9,6 +9,9 @@ extends Area2D
 @onready var camera = get_node("../../Camera2D")
 @onready var left_side_wall = get_node("../../StaticBody2D")
 
+func on_body_continue():
+	queue_free()
+
 func _on_body_entered(_body):
 	
 	if change_to_chill:
@@ -24,4 +27,4 @@ func _on_body_entered(_body):
 	camera.position = new_camera_position
 	var tween = create_tween()
 	tween.tween_property(left_side_wall, "position", new_camera_position, 0.5)
-	queue_free()
+	on_body_continue()
