@@ -49,6 +49,9 @@ uniform bool clip_warp = false;
 uniform float vignette_intensity = 0.4; // Size of the vignette, how far towards the middle it should go.
 uniform float vignette_opacity : hint_range(0.0, 1.0) = 0.5;
 
+// For tweening the effect int
+uniform float enable_amount: hint_range(0.0, 1.0) = 1.0;
+
 // Used by the noise functin to generate a pseudo random value between 0.0 and 1.0
 vec2 random(vec2 uv){
     uv = vec2( dot(uv, vec2(127.1,311.7) ),
@@ -227,6 +230,8 @@ void fragment()
 		float midpoint = pow(0.5, 2.2);
 		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
 	}
+	
+	text.a *= enable_amount;
 	
 	COLOR = text;
 }

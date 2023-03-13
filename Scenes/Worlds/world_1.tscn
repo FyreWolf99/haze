@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://8r7ysfjrpmn4"]
+[gd_scene load_steps=22 format=3 uid="uid://8r7ysfjrpmn4"]
 
 [ext_resource type="Script" path="res://Scripts/Players/BasicPlayer.gd" id="1_shxd1"]
 [ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="1_uy70p"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://Scripts/AreaDoorTransition.gd" id="4_tiqem"]
 [ext_resource type="Texture2D" uid="uid://dpqkopfbnhtj7" path="res://Assets/Platformer/Tilemap/tiles_packed.png" id="5_0sumn"]
 [ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="5_lonpi"]
-[ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="6_indwo"]
 [ext_resource type="Texture2D" uid="uid://b38g1ln013wq0" path="res://Assets/Platformer/Tiles/tile_0065.png" id="8_0egy2"]
 [ext_resource type="Script" path="res://Scripts/ButtonTrigger.gd" id="8_acb4j"]
 [ext_resource type="Texture2D" uid="uid://ba6u3ppcht3g8" path="res://Assets/Platformer/Tiles/tile_0066.png" id="9_845p2"]
@@ -1069,8 +1068,6 @@ cell_quadrant_size = 18
 format = 2
 layer_0/tile_data = PackedInt32Array(1441821, 196608, 0, 1441792, 65536, 0, 1441793, 131072, 0, 1441794, 131072, 0, 1441795, 131072, 0, 1441796, 131072, 0, 1441797, 131072, 0, 1441798, 131072, 0, 1441799, 131072, 0, 1441800, 131072, 0, 1441801, 131072, 0, 1441802, 131072, 0, 1441803, 131072, 0, 1441804, 131072, 0, 1441805, 131072, 0, 1441806, 131072, 0, 1441807, 131072, 0, 1441808, 131072, 0, 1441809, 131072, 0, 1441810, 131072, 0, 1441811, 131072, 0, 1441812, 131072, 0, 1441813, 131072, 0, 1441814, 131072, 0, 1441815, 131072, 0, 1441816, 131072, 0, 1441817, 131072, 0, 1441818, 131072, 0, 1441819, 131072, 0, 1441820, 131072, 0, 1441822, 262144, 0, 1441823, 327680, 0, 1441824, 327680, 0, 1441825, 327680, 0, 1441826, 327680, 1, 1441827, 327680, 0, 1441828, 327680, 0, 1441829, 327680, 0, 1441830, 393216, 65538, 1441831, 327680, 1, 1441832, 327680, 0, 1441833, 327680, 0, 1441837, 327680, 0, 1441839, 327680, 1, 1441840, 327680, 0, 1441841, 327680, 0, 1441842, 393216, 65538, 1441843, 327680, 0, 1441844, 327680, 0, 1441845, 327680, 0, 1441846, 327680, 0, 1441847, 327680, 1, 1441848, 327680, 0, 1441849, 327680, 0, 1441850, 327680, 0, 1441851, 393216, 1, 1310756, 458752, 6, 1310757, 524288, 5, 1310758, 589824, 6, 1310759, 524288, 5, 1310760, 655360, 6, 1376294, 327680, 65540, 1441838, 327680, 0, 1179691, 458752, 5, 1441835, 327680, 0, 1179692, 524288, 6, 1441836, 393216, 65538, 1245228, 524288, 0, 1310764, 524288, 1, 1376300, 524288, 131072, 1179693, 655360, 5, 1441834, 327680, 0, 1048626, 589824, 5, 1048625, 458752, 6, 1048627, 655360, 6, 1114162, 393216, 65540, 1179698, 393216, 3, 1245234, 393216, 3, 1310770, 393216, 3, 1376306, 393216, 3, 1441880, 327680, 0, 1441852, 458752, 6, 1441853, 524288, 5, 1441854, 524288, 5, 1441855, 524288, 5, 1441856, 524288, 6, 1441857, 524288, 5, 1441858, 524288, 5, 1441859, 524288, 5, 1441860, 589824, 6, 1441861, 524288, 5, 1441862, 524288, 5, 1441863, 524288, 5, 1441864, 524288, 5, 1441865, 524288, 5, 1441866, 655360, 6, 1441867, 262144, 1, 1441868, 327680, 0, 1441869, 327680, 0, 1441870, 327680, 0, 1441871, 327680, 1, 1441872, 327680, 0, 1441873, 327680, 0, 1441874, 327680, 1, 1441875, 327680, 0, 1441876, 327680, 0, 1441877, 327680, 0, 1441878, 327680, 0, 1441879, 327680, 1, 1441881, 393216, 1, 1441882, 262144, 0, 1441883, 327680, 1, 1441884, 327680, 0, 1441885, 327680, 0, 1441890, 327680, 1, 1441895, 327680, 1, 1441886, 327680, 0, 1441887, 327680, 0, 1441888, 327680, 0, 1441889, 327680, 0, 1441891, 327680, 0, 1441892, 327680, 0, 1441893, 327680, 0, 1441894, 327680, 0, 1441896, 393216, 0, 1441897, 65536, 0, 1441898, 131072, 0, 1441899, 131072, 0, 1441900, 131072, 0, 1441901, 131072, 0, 1441902, 131072, 0, 1441903, 131072, 0, 1441904, 131072, 0, 1441905, 131072, 0, 1441906, 131072, 0, 1441907, 131072, 0, 1441908, 131072, 0, 1441909, 131072, 0, 1441910, 131072, 0, 1441911, 196608, 0, 1376284, 524289, 4, 1376314, 524289, 4, 1376344, 524289, 4)
 
-[node name="CRTBlur" parent="." instance=ExtResource("6_indwo")]
-
 [node name="Transitions" type="Node" parent="."]
 
 [node name="ROOM1" type="Area2D" parent="Transitions"]
@@ -1099,10 +1096,20 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("4_tiqem")
 new_camera_position = Vector2(1620, 0)
-change_to_chill = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM3"]
 position = Vector2(1611, 207)
+shape = SubResource("RectangleShape2D_8dhvm")
+
+[node name="ROOM4" type="Area2D" parent="Transitions"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_tiqem")
+new_camera_position = Vector2(1620, 0)
+glitch = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM4"]
+position = Vector2(1890, 207)
 shape = SubResource("RectangleShape2D_8dhvm")
 
 [node name="ButtonTrigger" type="Area2D" parent="."]
@@ -1138,9 +1145,20 @@ texture = ExtResource("12_jjphq")
 position = Vector2(0, 36)
 texture = ExtResource("13_he1b7")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 144.0
+offset_top = 270.0
+offset_right = 189.0
+offset_bottom = 333.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "   W
+A S D"
+autowrap_mode = 0
+
 [connection signal="body_entered" from="Transitions/ROOM1" to="Transitions/ROOM1" method="_on_body_entered"]
 [connection signal="body_entered" from="Transitions/ROOM2" to="Transitions/ROOM2" method="_on_body_entered"]
 [connection signal="body_entered" from="Transitions/ROOM3" to="Transitions/ROOM3" method="_on_body_entered"]
+[connection signal="body_entered" from="Transitions/ROOM4" to="Transitions/ROOM4" method="_on_body_entered"]
 [connection signal="body_entered" from="ButtonTrigger" to="ButtonTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="ButtonTrigger" to="ButtonTrigger" method="_on_body_exited"]
 

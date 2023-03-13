@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://1o2rwg08gtjx"]
+
+[ext_resource type="Shader" path="res://Shaders/pixxelate_and_delete.gdshader" id="1_7ouhb"]
+[ext_resource type="Script" path="res://Scripts/pixxelate_and_delete.gd" id="1_m2lj2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nld8c"]
+shader = ExtResource("1_7ouhb")
+shader_parameter/time = 1.57
+shader_parameter/custom_resolution = Vector2(540, 414)
+
+[sub_resource type="Animation" id="Animation_sx3bm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:material:shader_parameter/time")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57]
+}
+
+[sub_resource type="Animation" id="Animation_u1p81"]
+resource_name = "fuck_shit_up"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:material:shader_parameter/time")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.57, 0.467, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/ColorRect:material:shader_parameter/custom_resolution")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2160, 1656), Vector2(135, 103)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e6j2y"]
+_data = {
+"RESET": SubResource("Animation_sx3bm"),
+"fuck_shit_up": SubResource("Animation_u1p81")
+}
+
+[node name="Pixxelate And Delete" type="CanvasLayer"]
+layer = 69
+script = ExtResource("1_m2lj2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_nld8c")
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 414.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e6j2y")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

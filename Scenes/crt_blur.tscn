@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpd8f0wa8uw6k"]
+[gd_scene load_steps=7 format=3 uid="uid://cpd8f0wa8uw6k"]
 
+[ext_resource type="Script" path="res://Scripts/crt_blur.gd" id="1_8ontc"]
 [ext_resource type="Shader" path="res://Shaders/blur.gdshader" id="1_lnh8s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qh541"]
@@ -21,13 +22,76 @@ shader_parameter/static_noise_intensity = 0.06
 shader_parameter/aberration = 0.03
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 1.0
+shader_parameter/warp_amount = 0.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
+shader_parameter/enable_amount = 0.0
+
+[sub_resource type="Animation" id="Animation_n1qdk"]
+resource_name = "fade_in"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CRTBlur/ColorRect:material:shader_parameter/enable_amount")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CRTBlur/ColorRect:material:shader_parameter/warp_amount")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_8w1b2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CRTBlur/ColorRect:material:shader_parameter/enable_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CRTBlur/ColorRect:material:shader_parameter/warp_amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytrkc"]
+_data = {
+"RESET": SubResource("Animation_8w1b2"),
+"fade_in": SubResource("Animation_n1qdk")
+}
 
 [node name="CRTBlur" type="CanvasLayer"]
 layer = 69
+script = ExtResource("1_8ontc")
 
 [node name="CRTBlur" type="Control" parent="."]
 layout_mode = 3
@@ -42,3 +106,8 @@ material = SubResource("ShaderMaterial_qh541")
 layout_mode = 0
 offset_right = 540.0
 offset_bottom = 414.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ytrkc")
+}

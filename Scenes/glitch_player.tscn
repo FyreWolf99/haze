@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm24gibutv8ge"]
+
+[ext_resource type="Script" path="res://Scripts/glitch_player.gd" id="1_j4cw1"]
+[ext_resource type="VideoStream" path="res://Assets/Video/Glitch.ogv" id="1_pe8e6"]
+
+[node name="GlitchPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4cw1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 414.0
+stream = ExtResource("1_pe8e6")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
