@@ -4,3 +4,6 @@ extends AnimatedSprite2D
 func _ready():
 	play("default")
 
+func _on_area_2d_body_entered(_body):
+	BackgroundMusic.shut_up()
+	get_tree().change_scene_to_file("res://Scenes/death.tscn")

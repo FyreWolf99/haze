@@ -1,28 +1,29 @@
-[gd_scene load_steps=26 format=3 uid="uid://dyfjaouydr1im"]
+[gd_scene load_steps=28 format=3 uid="uid://dwtv1t8c8mhbp"]
 
-[ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="1_yow8e"]
-[ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="2_3t3yd"]
-[ext_resource type="Script" path="res://Scripts/Players/BasicPlayer.gd" id="2_7qq31"]
-[ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="3_51xvm"]
-[ext_resource type="Texture2D" uid="uid://bm4kkci5gx05" path="res://Assets/PlatformerIndustrial/Tilemap/tilemap_packed.png" id="4_c0yel"]
-[ext_resource type="Texture2D" uid="uid://dpqkopfbnhtj7" path="res://Assets/Platformer/Tilemap/tiles_packed.png" id="5_kx1cy"]
-[ext_resource type="Script" path="res://Scripts/AreaDoorTransition.gd" id="7_2je64"]
-[ext_resource type="Script" path="res://Scripts/ButtonTrigger.gd" id="8_gwco2"]
-[ext_resource type="Script" path="res://Scripts/FireWalkerTrigger.gd" id="8_umn1i"]
-[ext_resource type="Texture2D" uid="uid://b38g1ln013wq0" path="res://Assets/Platformer/Tiles/tile_0065.png" id="9_5hclc"]
-[ext_resource type="Texture2D" uid="uid://ba6u3ppcht3g8" path="res://Assets/Platformer/Tiles/tile_0066.png" id="10_kr0kw"]
-[ext_resource type="Texture2D" uid="uid://bm2ds66e8b1r8" path="res://Assets/PlatformerIndustrial/Tiles/tile_0016.png" id="11_tfs4s"]
-[ext_resource type="Script" path="res://Scripts/ButtonTriggerChange.gd" id="12_1na6l"]
-[ext_resource type="Script" path="res://Scripts/Door.gd" id="12_hr6kd"]
-[ext_resource type="Texture2D" uid="uid://bo6d1s45rmh5e" path="res://Assets/PlatformerIndustrial/Tiles/tile_0032.png" id="13_0pnuf"]
-[ext_resource type="Texture2D" uid="uid://dxsoeeug0gdva" path="res://Assets/PlatformerIndustrial/Tiles/tile_0048.png" id="14_1d4a4"]
-[ext_resource type="PackedScene" uid="uid://bu2wtvs0i52e5" path="res://Scenes/lava_wall.tscn" id="15_5xnru"]
+[ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="1_i6yk1"]
+[ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="2_0d8vm"]
+[ext_resource type="Script" path="res://Scripts/Players/BasicPlayer.gd" id="3_3koxx"]
+[ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="4_ou1vg"]
+[ext_resource type="Texture2D" uid="uid://bm4kkci5gx05" path="res://Assets/PlatformerIndustrial/Tilemap/tilemap_packed.png" id="5_w3fq2"]
+[ext_resource type="Texture2D" uid="uid://dpqkopfbnhtj7" path="res://Assets/Platformer/Tilemap/tiles_packed.png" id="6_7kylj"]
+[ext_resource type="Script" path="res://Scripts/AreaDoorTransition.gd" id="7_nqkw5"]
+[ext_resource type="Script" path="res://Scripts/FireWalkerTrigger.gd" id="8_3o74q"]
+[ext_resource type="Script" path="res://Scripts/ButtonTrigger.gd" id="9_yr41e"]
+[ext_resource type="Texture2D" uid="uid://b38g1ln013wq0" path="res://Assets/Platformer/Tiles/tile_0065.png" id="10_r5mk7"]
+[ext_resource type="Texture2D" uid="uid://ba6u3ppcht3g8" path="res://Assets/Platformer/Tiles/tile_0066.png" id="11_t03e0"]
+[ext_resource type="Script" path="res://Scripts/ButtonTriggerChange.gd" id="12_88t0k"]
+[ext_resource type="Texture2D" uid="uid://bm2ds66e8b1r8" path="res://Assets/PlatformerIndustrial/Tiles/tile_0016.png" id="13_um6ti"]
+[ext_resource type="Script" path="res://Scripts/Door.gd" id="14_vdvgx"]
+[ext_resource type="Texture2D" uid="uid://bo6d1s45rmh5e" path="res://Assets/PlatformerIndustrial/Tiles/tile_0032.png" id="15_jv6lp"]
+[ext_resource type="Texture2D" uid="uid://dxsoeeug0gdva" path="res://Assets/PlatformerIndustrial/Tiles/tile_0048.png" id="16_y4t6m"]
+[ext_resource type="PackedScene" uid="uid://bu2wtvs0i52e5" path="res://Scenes/lava_wall.tscn" id="17_ckqxu"]
+[ext_resource type="Script" path="res://Scripts/world_3_scene_hidden.gd" id="18_s76fr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beleg"]
 normal = Vector2(1, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v3l3a"]
-texture = ExtResource("4_c0yel")
+texture = ExtResource("5_w3fq2")
 texture_region_size = Vector2i(18, 18)
 1:0/0 = 0
 1:0/0/z_index = 2
@@ -473,7 +474,7 @@ texture_region_size = Vector2i(18, 18)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjp0e"]
-texture = ExtResource("5_kx1cy")
+texture = ExtResource("6_7kylj")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1032,10 +1033,10 @@ radius = 36.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_5hclc")
+"texture": ExtResource("10_r5mk7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_kr0kw")
+"texture": ExtResource("11_t03e0")
 }],
 "loop": false,
 "name": &"default",
@@ -1045,19 +1046,22 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3rhy"]
 size = Vector2(20, 55)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2c12"]
+size = Vector2(540, 36)
+
 [node name="World2" type="Node2D"]
 
-[node name="Background Glitch" parent="." instance=ExtResource("1_yow8e")]
+[node name="Background Glitch" parent="." instance=ExtResource("1_i6yk1")]
 
-[node name="CRTBlur" parent="." instance=ExtResource("2_3t3yd")]
+[node name="CRTBlur" parent="." instance=ExtResource("2_0d8vm")]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(189, 360)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("2_7qq31")
+script = ExtResource("3_3koxx")
 
-[node name="PlayerReUse" parent="CharacterBody2D" instance=ExtResource("3_51xvm")]
+[node name="PlayerReUse" parent="CharacterBody2D" instance=ExtResource("4_ou1vg")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -1079,7 +1083,7 @@ layer_0/tile_data = PackedInt32Array(1441821, 196608, 0, 1441792, 65536, 0, 1441
 [node name="ROOM1" type="Area2D" parent="Transitions"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("7_2je64")
+script = ExtResource("7_nqkw5")
 new_camera_position = Vector2(540, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM1"]
@@ -1090,7 +1094,7 @@ shape = SubResource("RectangleShape2D_3q5xc")
 position = Vector2(540, 0)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("7_2je64")
+script = ExtResource("7_nqkw5")
 new_camera_position = Vector2(1080, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM2"]
@@ -1101,7 +1105,7 @@ shape = SubResource("RectangleShape2D_3q5xc")
 position = Vector2(1080, 0)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("8_umn1i")
+script = ExtResource("8_3o74q")
 new_camera_position = Vector2(1620, 0)
 change_to_tense = true
 
@@ -1117,7 +1121,7 @@ autostart = true
 position = Vector2(1224, 378)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("8_gwco2")
+script = ExtResource("9_yr41e")
 button_affects = NodePath("../Door")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger"]
@@ -1131,7 +1135,7 @@ sprite_frames = SubResource("SpriteFrames_du6uh")
 position = Vector2(3051, 378)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("8_gwco2")
+script = ExtResource("9_yr41e")
 button_affects = NodePath("../Door2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger2"]
@@ -1145,7 +1149,7 @@ sprite_frames = SubResource("SpriteFrames_du6uh")
 position = Vector2(4536, 378)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("12_1na6l")
+script = ExtResource("12_88t0k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger3"]
 shape = SubResource("CircleShape2D_huxy1")
@@ -1156,8 +1160,8 @@ sprite_frames = SubResource("SpriteFrames_du6uh")
 
 [node name="Door" type="Sprite2D" parent="."]
 position = Vector2(1350, 351)
-texture = ExtResource("11_tfs4s")
-script = ExtResource("12_hr6kd")
+texture = ExtResource("13_um6ti")
+script = ExtResource("14_vdvgx")
 new_pos = Vector2(1350, 414)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Door"]
@@ -1168,36 +1172,16 @@ shape = SubResource("RectangleShape2D_q3rhy")
 
 [node name="Tile0032" type="Sprite2D" parent="Door"]
 position = Vector2(0, 18)
-texture = ExtResource("13_0pnuf")
+texture = ExtResource("15_jv6lp")
 
 [node name="Tile0033" type="Sprite2D" parent="Door"]
 position = Vector2(0, 36)
-texture = ExtResource("14_1d4a4")
-
-[node name="Door3" type="Sprite2D" parent="."]
-position = Vector2(189, 405)
-texture = ExtResource("11_tfs4s")
-script = ExtResource("12_hr6kd")
-new_pos = Vector2(1350, 414)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Door3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door3/StaticBody2D"]
-position = Vector2(0, 17.5)
-shape = SubResource("RectangleShape2D_q3rhy")
-
-[node name="Tile0032" type="Sprite2D" parent="Door3"]
-position = Vector2(0, 18)
-texture = ExtResource("13_0pnuf")
-
-[node name="Tile0033" type="Sprite2D" parent="Door3"]
-position = Vector2(0, 36)
-texture = ExtResource("14_1d4a4")
+texture = ExtResource("16_y4t6m")
 
 [node name="Door2" type="Sprite2D" parent="."]
 position = Vector2(3501, 351)
-texture = ExtResource("11_tfs4s")
-script = ExtResource("12_hr6kd")
+texture = ExtResource("13_um6ti")
+script = ExtResource("14_vdvgx")
 new_pos = Vector2(3501, 414)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Door2"]
@@ -1208,13 +1192,13 @@ shape = SubResource("RectangleShape2D_q3rhy")
 
 [node name="Tile0032" type="Sprite2D" parent="Door2"]
 position = Vector2(0, 18)
-texture = ExtResource("13_0pnuf")
+texture = ExtResource("15_jv6lp")
 
 [node name="Tile0033" type="Sprite2D" parent="Door2"]
 position = Vector2(0, 36)
-texture = ExtResource("14_1d4a4")
+texture = ExtResource("16_y4t6m")
 
-[node name="LavaWall" parent="." instance=ExtResource("15_5xnru")]
+[node name="LavaWall" parent="." instance=ExtResource("17_ckqxu")]
 position = Vector2(-270, 198)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -1224,6 +1208,15 @@ offset_right = 1714.0
 offset_bottom = 388.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "RUN"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("18_s76fr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(270, 432)
+shape = SubResource("RectangleShape2D_h2c12")
 
 [connection signal="body_entered" from="Transitions/ROOM1" to="Transitions/ROOM1" method="_on_body_entered"]
 [connection signal="body_entered" from="Transitions/ROOM2" to="Transitions/ROOM2" method="_on_body_entered"]
@@ -1235,5 +1228,6 @@ text = "RUN"
 [connection signal="body_exited" from="ButtonTrigger2" to="ButtonTrigger2" method="_on_body_exited"]
 [connection signal="body_entered" from="ButtonTrigger3" to="ButtonTrigger3" method="_on_body_entered"]
 [connection signal="body_exited" from="ButtonTrigger3" to="ButtonTrigger3" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 
 [editable path="CharacterBody2D/PlayerReUse"]

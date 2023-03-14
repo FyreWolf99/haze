@@ -56,7 +56,7 @@ func tense():
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(chill_music, "volume_db", -80, TRANS_SEC)
-	tween.tween_property(tense_music, "volume_db", 0, TRANS_SEC * 60)
+	tween.tween_property(tense_music, "volume_db", 0, TRANS_SEC * 10)
 	tween.tween_property(loud_music, "volume_db", -80, TRANS_SEC)
 
 func shut_up():
