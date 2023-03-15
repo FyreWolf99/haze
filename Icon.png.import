@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q54fydtpmrvp"
-path="res://.godot/imported/lava_spr_strip45.png-2e9096e3550d8f7c3bbd9224c79d220f.ctex"
+uid="uid://cxlr3iy4v3wr2"
+path="res://.godot/imported/Icon.png-33e63688031d53466d4d656c73cf10ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lava_spr_strip45.png"
-dest_files=["res://.godot/imported/lava_spr_strip45.png-2e9096e3550d8f7c3bbd9224c79d220f.ctex"]
+source_file="res://Icon.png"
+dest_files=["res://.godot/imported/Icon.png-33e63688031d53466d4d656c73cf10ca.ctex"]
 
 [params]
 

@@ -7,13 +7,13 @@ uniform float len: hint_range(0.0, 1.0, 0.1);
 float curve(float uvx, float time)
 {
 	float output;
-	if (uvx < (0.1 + 0.1 * len))
+	if (uvx < (0.5))
 	{
 		output = 1.0;
 	}
 	else
 	{
-		output = 3.0 - uvx * (20.0 - (10.0 * len));
+		output = 1.0 - uvx;
 	}
 	
 	return output - abs(sin(time)) / 2.0;

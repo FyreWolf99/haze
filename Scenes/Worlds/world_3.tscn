@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dwtv1t8c8mhbp"]
+[gd_scene load_steps=14 format=3 uid="uid://dwtv1t8c8mhbp"]
 
 [ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="1_i6yk1"]
 [ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="2_0d8vm"]
@@ -6,21 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="4_ou1vg"]
 [ext_resource type="Texture2D" uid="uid://bm4kkci5gx05" path="res://Assets/PlatformerIndustrial/Tilemap/tilemap_packed.png" id="5_w3fq2"]
 [ext_resource type="Texture2D" uid="uid://dpqkopfbnhtj7" path="res://Assets/Platformer/Tilemap/tiles_packed.png" id="6_7kylj"]
-[ext_resource type="Script" path="res://Scripts/AreaDoorTransition.gd" id="7_nqkw5"]
-[ext_resource type="Script" path="res://Scripts/FireWalkerTrigger.gd" id="8_3o74q"]
-[ext_resource type="Script" path="res://Scripts/ButtonTrigger.gd" id="9_yr41e"]
-[ext_resource type="Texture2D" uid="uid://b38g1ln013wq0" path="res://Assets/Platformer/Tiles/tile_0065.png" id="10_r5mk7"]
-[ext_resource type="Texture2D" uid="uid://ba6u3ppcht3g8" path="res://Assets/Platformer/Tiles/tile_0066.png" id="11_t03e0"]
-[ext_resource type="Script" path="res://Scripts/ButtonTriggerChange.gd" id="12_88t0k"]
-[ext_resource type="Texture2D" uid="uid://bm2ds66e8b1r8" path="res://Assets/PlatformerIndustrial/Tiles/tile_0016.png" id="13_um6ti"]
-[ext_resource type="Script" path="res://Scripts/Door.gd" id="14_vdvgx"]
-[ext_resource type="Texture2D" uid="uid://bo6d1s45rmh5e" path="res://Assets/PlatformerIndustrial/Tiles/tile_0032.png" id="15_jv6lp"]
-[ext_resource type="Texture2D" uid="uid://dxsoeeug0gdva" path="res://Assets/PlatformerIndustrial/Tiles/tile_0048.png" id="16_y4t6m"]
-[ext_resource type="PackedScene" uid="uid://bu2wtvs0i52e5" path="res://Scenes/lava_wall.tscn" id="17_ckqxu"]
 [ext_resource type="Script" path="res://Scripts/world_3_scene_hidden.gd" id="18_s76fr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beleg"]
 normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g26fv"]
+size = Vector2(20, 424)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v3l3a"]
 texture = ExtResource("5_w3fq2")
@@ -1023,40 +1015,18 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v3l3a")
 sources/1 = SubResource("TileSetAtlasSource_pjp0e")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q5xc"]
-size = Vector2(18, 414)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_huxy1"]
-radius = 36.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_du6uh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_r5mk7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_t03e0")
-}],
-"loop": false,
-"name": &"default",
-"speed": 24.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3rhy"]
-size = Vector2(20, 55)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2c12"]
 size = Vector2(540, 36)
 
-[node name="World2" type="Node2D"]
+[node name="World3" type="Node2D"]
 
 [node name="Background Glitch" parent="." instance=ExtResource("1_i6yk1")]
 
 [node name="CRTBlur" parent="." instance=ExtResource("2_0d8vm")]
+reset = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(189, 360)
+position = Vector2(189, 90)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("3_3koxx")
@@ -1068,6 +1038,10 @@ script = ExtResource("3_3koxx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_beleg")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(550, 209)
+shape = SubResource("RectangleShape2D_g26fv")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 position_smoothing_enabled = true
@@ -1078,137 +1052,6 @@ cell_quadrant_size = 18
 format = 2
 layer_0/tile_data = PackedInt32Array(1441821, 196608, 0, 1441792, 65536, 0, 1441793, 131072, 0, 1441794, 131072, 0, 1441795, 131072, 0, 1441796, 131072, 0, 1441797, 131072, 0, 1441798, 131072, 0, 1441799, 131072, 0, 1441800, 131072, 0, 1441803, 131072, 0, 1441804, 131072, 0, 1441805, 131072, 0, 1441806, 131072, 0, 1441807, 131072, 0, 1441808, 131072, 0, 1441809, 131072, 0, 1441810, 131072, 0, 1441811, 131072, 0, 1441812, 131072, 0, 1441813, 131072, 0, 1441814, 131072, 0, 1441815, 131072, 0, 1441816, 131072, 0, 1441817, 131072, 0, 1441818, 131072, 0, 1441819, 131072, 0, 1441820, 131072, 0, 1441822, 262144, 0, 1441823, 327680, 0, 1441824, 327680, 0, 1441825, 327680, 0, 1441826, 327680, 1, 1441827, 327680, 0, 1441828, 327680, 0, 1441829, 327680, 0, 1441830, 393216, 65538, 1441831, 327680, 1, 1441832, 327680, 0, 1441833, 327680, 0, 1441837, 327680, 0, 1441839, 327680, 1, 1441840, 327680, 0, 1441841, 327680, 0, 1441842, 393216, 65538, 1441843, 327680, 0, 1441844, 327680, 0, 1441845, 327680, 0, 1441846, 327680, 0, 1441847, 327680, 1, 1441848, 327680, 0, 1441849, 327680, 0, 1441850, 327680, 0, 1441851, 393216, 1, 1310756, 458752, 6, 1310757, 524288, 5, 1310758, 589824, 6, 1310759, 524288, 5, 1310760, 655360, 6, 1376294, 327680, 65540, 1441838, 327680, 0, 1179691, 458752, 5, 1441835, 327680, 0, 1179692, 524288, 6, 1441836, 393216, 65538, 1245228, 524288, 0, 1310764, 524288, 1, 1376300, 524288, 131072, 1179693, 655360, 5, 1441834, 327680, 0, 1048626, 589824, 5, 1048625, 458752, 6, 1048627, 655360, 6, 1114162, 393216, 65540, 1179698, 393216, 3, 1245234, 393216, 3, 1310770, 393216, 3, 1376306, 393216, 3, 1441880, 327680, 0, 1441852, 458752, 6, 1441853, 524288, 5, 1441854, 524288, 5, 1441855, 524288, 5, 1441856, 524288, 6, 1441857, 524288, 5, 1441858, 524288, 5, 1441859, 524288, 5, 1441860, 589824, 6, 1441861, 524288, 5, 1441862, 524288, 5, 1441863, 524288, 5, 1441864, 524288, 5, 1441865, 524288, 5, 1441866, 655360, 6, 1441867, 262144, 1, 1441868, 327680, 0, 1441869, 327680, 0, 1441870, 327680, 0, 1441871, 327680, 1, 1441872, 327680, 0, 1441873, 327680, 0, 1441874, 327680, 1, 1441875, 327680, 0, 1441876, 327680, 0, 1441877, 327680, 0, 1441878, 327680, 0, 1441879, 327680, 1, 1441881, 393216, 1, 1441882, 262144, 0, 1441883, 327680, 1, 1441884, 327680, 0, 1441885, 327680, 0, 1441890, 327680, 1, 1441895, 327680, 1, 1441886, 327680, 0, 1441887, 327680, 0, 1441888, 327680, 0, 1441889, 327680, 0, 1441891, 327680, 0, 1441892, 327680, 0, 1441893, 327680, 0, 1441894, 327680, 0, 1441896, 393216, 0, 1441897, 65536, 0, 1441898, 131072, 0, 1441899, 131072, 0, 1441900, 131072, 0, 1441901, 131072, 0, 1441902, 131072, 0, 1441903, 131072, 0, 1441904, 131072, 0, 1441905, 131072, 0, 1441906, 131072, 0, 1441907, 131072, 0, 1441908, 131072, 0, 1441909, 131072, 0, 1441910, 131072, 0, 1441911, 196608, 0, 1376284, 524289, 4, 1376314, 524289, 4, 1376344, 524289, 4, 1441912, 458752, 5, 1441913, 524288, 5, 1441914, 524288, 5, 1441915, 524288, 5, 1441916, 524288, 6, 1441917, 524288, 5, 1441918, 524288, 5, 1441919, 524288, 5, 1441920, 524288, 5, 1441921, 524288, 6, 1441922, 524288, 5, 1441923, 524288, 5, 1441924, 524288, 5, 1441925, 524288, 5, 1441926, 524288, 5, 1441927, 524288, 6, 1441928, 524288, 5, 1441929, 524288, 5, 1441930, 524288, 5, 1441931, 524288, 5, 1441932, 524288, 6, 1441933, 524288, 5, 1441934, 524288, 6, 1441935, 524288, 5, 1441936, 524288, 6, 1441937, 524288, 5, 1441938, 524288, 6, 1441939, 524288, 5, 1441940, 524288, 5, 1441941, 655360, 6, 1441942, 262144, 1, 1441956, 393216, 1, 1441943, 327680, 0, 1441944, 327680, 0, 1441945, 327680, 1, 1441946, 327680, 0, 1441947, 327680, 1, 1441948, 327680, 0, 1441949, 393216, 65538, 1441950, 327680, 0, 1441951, 327680, 0, 1441952, 327680, 1, 1441953, 327680, 0, 1441954, 327680, 1, 1441955, 327680, 0, 1376413, 327680, 3, 1310877, 524288, 5, 1310876, 458752, 6, 1310878, 655360, 6, 1245347, 0, 0, 1048742, 393216, 3, 1114278, 393216, 3, 1179814, 393216, 3, 1245350, 393216, 4, 983206, 393216, 65540, 1310884, 655360, 2, 1376420, 655360, 4, 1245348, 655360, 1, 1441957, 458752, 5, 1441958, 524288, 5, 1441959, 524288, 6, 1441960, 524288, 5, 1441961, 524288, 5, 1441962, 524288, 6, 1441963, 524288, 5, 1441964, 589824, 6, 1441965, 524288, 5, 1441966, 524288, 5, 1441967, 524288, 6, 1441968, 524288, 5, 1441969, 524288, 6, 1441970, 524288, 5, 1441971, 655360, 6, 786595, 458752, 1, 852131, 458752, 1, 917667, 458752, 1, 983203, 458752, 1, 1048739, 458752, 1, 1114275, 458752, 1, 1179811, 458752, 3, 163, 458752, 0, 721059, 458752, 1, 655523, 458752, 1, 589987, 458752, 1, 524451, 458752, 1, 458915, 458752, 1, 393379, 458752, 1, 327843, 458752, 1, 262307, 458752, 1, 196771, 458752, 1, 131235, 458752, 1, 65699, 458752, 1, 1441972, 65536, 0, 1441973, 131072, 0, 1441974, 131072, 0, 1441975, 131072, 0, 1441976, 131072, 0, 1441977, 131072, 0, 1441984, 131072, 0, 1441985, 131072, 0, 1441986, 196608, 0, 1441978, 131072, 0, 1441979, 131072, 0, 1441980, 131072, 0, 1441981, 131072, 0, 1441982, 131072, 0, 1441983, 131072, 0, 1441987, 262144, 1, 1442001, 327680, 0, 1441988, 327680, 0, 1441989, 327680, 0, 1441990, 327680, 0, 1441991, 327680, 0, 1441992, 327680, 1, 1441993, 327680, 0, 1441994, 327680, 0, 1441995, 393216, 65538, 1441996, 327680, 1, 1441997, 327680, 0, 1441998, 327680, 0, 1441999, 327680, 1, 1442000, 327680, 1, 1442016, 393216, 1, 1442003, 327680, 0, 1442004, 327680, 0, 1442005, 393216, 65538, 1442011, 327680, 0, 1442012, 327680, 0, 1442013, 327680, 1, 1442014, 327680, 0, 1442015, 327680, 0, 1442010, 327680, 0, 1442009, 327680, 1, 1442008, 327680, 0, 1442007, 327680, 0, 1442006, 327680, 0, 1310922, 458752, 6, 1245398, 524288, 5, 1442002, 327680, 1, 1245397, 589824, 6, 1245399, 655360, 6, 1310923, 524288, 6, 1310924, 655360, 6, 1245396, 524288, 5, 1245395, 458752, 5, 1310933, 262144, 65540, 1376469, 262144, 3, 1376459, 262144, 65540, 1442017, 65536, 0, 1442046, 196608, 3, 1442018, 131072, 0, 1442019, 131072, 0, 1442020, 131072, 0, 1442021, 131072, 0, 1442022, 131072, 0, 1442023, 131072, 0, 1442024, 131072, 0, 1442025, 131072, 0, 1442026, 131072, 0, 1442027, 131072, 0, 1442028, 131072, 0, 1442029, 131072, 0, 1442030, 131072, 0, 1442031, 131072, 0, 1442032, 131072, 0, 1442033, 131072, 0, 1442034, 131072, 0, 1442035, 131072, 0, 1442036, 131072, 0, 1442037, 131072, 0, 1442038, 131072, 0, 1442039, 131072, 0, 1442040, 131072, 0, 1442041, 131072, 0, 1442042, 131072, 0, 1442043, 131072, 0, 1442044, 131072, 0, 1442045, 131072, 0, 1376510, 0, 2, 1310974, 0, 2, 1245438, 0, 2, 1179902, 0, 2, 1114366, 0, 2, 721150, 0, 2, 655614, 0, 2, 590078, 0, 2, 786686, 0, 2, 852222, 0, 2, 917758, 0, 2, 983294, 0, 2, 1048830, 0, 2, 254, 0, 1, 65790, 0, 2, 131326, 0, 2, 196862, 0, 2, 262398, 0, 2, 327934, 0, 2, 393470, 0, 2, 459006, 0, 2, 524542, 0, 2, 1441801, 131072, 0)
 
-[node name="Transitions" type="Node" parent="."]
-
-[node name="ROOM1" type="Area2D" parent="Transitions"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("7_nqkw5")
-new_camera_position = Vector2(540, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM1"]
-position = Vector2(531, 207)
-shape = SubResource("RectangleShape2D_3q5xc")
-
-[node name="ROOM2" type="Area2D" parent="Transitions"]
-position = Vector2(540, 0)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("7_nqkw5")
-new_camera_position = Vector2(1080, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM2"]
-position = Vector2(531, 207)
-shape = SubResource("RectangleShape2D_3q5xc")
-
-[node name="ROOM34" type="Area2D" parent="Transitions"]
-position = Vector2(1080, 0)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("8_3o74q")
-new_camera_position = Vector2(1620, 0)
-change_to_tense = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ROOM34"]
-position = Vector2(531, 207)
-shape = SubResource("RectangleShape2D_3q5xc")
-
-[node name="Timer" type="Timer" parent="Transitions/ROOM34"]
-wait_time = 2.0
-autostart = true
-
-[node name="ButtonTrigger" type="Area2D" parent="."]
-position = Vector2(1224, 378)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("9_yr41e")
-button_affects = NodePath("../Door")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger"]
-shape = SubResource("CircleShape2D_huxy1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonTrigger"]
-position = Vector2(0, 9)
-sprite_frames = SubResource("SpriteFrames_du6uh")
-
-[node name="ButtonTrigger2" type="Area2D" parent="."]
-position = Vector2(3051, 378)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("9_yr41e")
-button_affects = NodePath("../Door2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger2"]
-shape = SubResource("CircleShape2D_huxy1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonTrigger2"]
-position = Vector2(0, 9)
-sprite_frames = SubResource("SpriteFrames_du6uh")
-
-[node name="ButtonTrigger3" type="Area2D" parent="."]
-position = Vector2(4536, 378)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("12_88t0k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonTrigger3"]
-shape = SubResource("CircleShape2D_huxy1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonTrigger3"]
-position = Vector2(0, 9)
-sprite_frames = SubResource("SpriteFrames_du6uh")
-
-[node name="Door" type="Sprite2D" parent="."]
-position = Vector2(1350, 351)
-texture = ExtResource("13_um6ti")
-script = ExtResource("14_vdvgx")
-new_pos = Vector2(1350, 414)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Door"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
-position = Vector2(0, 17.5)
-shape = SubResource("RectangleShape2D_q3rhy")
-
-[node name="Tile0032" type="Sprite2D" parent="Door"]
-position = Vector2(0, 18)
-texture = ExtResource("15_jv6lp")
-
-[node name="Tile0033" type="Sprite2D" parent="Door"]
-position = Vector2(0, 36)
-texture = ExtResource("16_y4t6m")
-
-[node name="Door2" type="Sprite2D" parent="."]
-position = Vector2(3501, 351)
-texture = ExtResource("13_um6ti")
-script = ExtResource("14_vdvgx")
-new_pos = Vector2(3501, 414)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Door2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2/StaticBody2D"]
-position = Vector2(0, 17.5)
-shape = SubResource("RectangleShape2D_q3rhy")
-
-[node name="Tile0032" type="Sprite2D" parent="Door2"]
-position = Vector2(0, 18)
-texture = ExtResource("15_jv6lp")
-
-[node name="Tile0033" type="Sprite2D" parent="Door2"]
-position = Vector2(0, 36)
-texture = ExtResource("16_y4t6m")
-
-[node name="LavaWall" parent="." instance=ExtResource("17_ckqxu")]
-position = Vector2(-270, 198)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 1674.0
-offset_top = 348.0
-offset_right = 1714.0
-offset_bottom = 388.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "RUN"
-
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
@@ -1218,16 +1061,6 @@ script = ExtResource("18_s76fr")
 position = Vector2(270, 432)
 shape = SubResource("RectangleShape2D_h2c12")
 
-[connection signal="body_entered" from="Transitions/ROOM1" to="Transitions/ROOM1" method="_on_body_entered"]
-[connection signal="body_entered" from="Transitions/ROOM2" to="Transitions/ROOM2" method="_on_body_entered"]
-[connection signal="body_entered" from="Transitions/ROOM34" to="Transitions/ROOM34" method="_on_body_entered"]
-[connection signal="timeout" from="Transitions/ROOM34/Timer" to="Transitions/ROOM34" method="_on_timer_timeout"]
-[connection signal="body_entered" from="ButtonTrigger" to="ButtonTrigger" method="_on_body_entered"]
-[connection signal="body_exited" from="ButtonTrigger" to="ButtonTrigger" method="_on_body_exited"]
-[connection signal="body_entered" from="ButtonTrigger2" to="ButtonTrigger2" method="_on_body_entered"]
-[connection signal="body_exited" from="ButtonTrigger2" to="ButtonTrigger2" method="_on_body_exited"]
-[connection signal="body_entered" from="ButtonTrigger3" to="ButtonTrigger3" method="_on_body_entered"]
-[connection signal="body_exited" from="ButtonTrigger3" to="ButtonTrigger3" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 
 [editable path="CharacterBody2D/PlayerReUse"]

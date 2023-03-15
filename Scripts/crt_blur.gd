@@ -1,6 +1,10 @@
 extends CanvasLayer
 
 @onready var anim = $AnimationPlayer
+@export var reset: bool = false
 
 func _ready():
-	anim.play("fade_in")
+	if reset:
+		anim.play("RESET")
+	else:
+		anim.play("fade_in")

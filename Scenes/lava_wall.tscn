@@ -209,23 +209,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fl27"]
-size = Vector2(3.2, 32)
+size = Vector2(6.40004, 32)
 
 [node name="LavaWall" type="AnimatedSprite2D"]
 material = SubResource("ShaderMaterial_7si2v")
-position = Vector2(270, 207)
+position = Vector2(540, 207)
 scale = Vector2(16.875, 12.9375)
 sprite_frames = SubResource("SpriteFrames_ilqbi")
 frame_progress = 0.306958
 script = ExtResource("47_ostb7")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(12.8, 0)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-14.4, -2.86102e-06)
-scale = Vector2(1, 1)
+position = Vector2(-16, -2.86102e-06)
 shape = SubResource("RectangleShape2D_6fl27")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

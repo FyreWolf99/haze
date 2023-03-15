@@ -4,4 +4,4 @@ extends Sprite2D
 
 func enable():
 	var tween = create_tween()
-	tween.tween_property(self, "position", new_pos, 2)
+	tween.tween_property(self, "position", new_pos, 1)

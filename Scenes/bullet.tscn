@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnali6l3fhy0y"]
+
+[ext_resource type="Texture2D" uid="uid://174r2ox4iyc7" path="res://Assets/Bullet.png" id="1_dejvv"]
+[ext_resource type="Shader" path="res://Shaders/invert.gdshader" id="1_sq7d3"]
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="3_4yh6v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hfgq3"]
+shader = ExtResource("1_sq7d3")
+
+[node name="Bullet" type="Sprite2D"]
+material = SubResource("ShaderMaterial_hfgq3")
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dejvv")
+script = ExtResource("3_4yh6v")

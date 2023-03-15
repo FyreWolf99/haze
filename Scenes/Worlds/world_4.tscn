@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://66e5myn61exn"]
+
+[ext_resource type="Script" path="res://Scripts/Players/PlayerTopDown.gd" id="1_8jgdb"]
+[ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="1_f5o4l"]
+[ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="1_hc6jn"]
+[ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="2_donm0"]
+
+[node name="World4" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_hc6jn")]
+
+[node name="CRTBlur" parent="." instance=ExtResource("2_donm0")]
+reset = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(270, 207)
+script = ExtResource("1_8jgdb")
+
+[node name="PlayerReUse" parent="CharacterBody2D" instance=ExtResource("1_f5o4l")]
+
+[editable path="CharacterBody2D/PlayerReUse"]
