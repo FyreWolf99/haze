@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="The Haze"
+config/description="Nothing makes sense, and I have a trumpet.s"
 run/main_scene="res://Scenes/Worlds/world_1.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://Icon.png"
@@ -24,7 +25,7 @@ BackgroundMusic="*res://Scripts/background_music.gd"
 window/size/viewport_width=540
 window/size/viewport_height=414
 window/size/mode=2
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [input]
 

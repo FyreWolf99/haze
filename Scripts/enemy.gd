@@ -11,11 +11,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
-	look_at(player.position)
-	var dir = Vector2(1, 1).rotated(rotation)
-	rotation = 0
+	var dir = (player.position - position).normalized()
 	velocity = dir * SPD
 	move_and_slide()
+	
+	if position.x > 540 - 18:
+		position.x = 540 - 18
+	elif position.x < 18:
+		position.x = 18
+	
+	if position.y > 414 - 18:
+		position.y = 414-18
+	elif position.y < 18:
+		position.y = 18
 
 func hit():
 	queue_free()

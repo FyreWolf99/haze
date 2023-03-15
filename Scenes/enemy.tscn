@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtfxvsnn4h17s"]
+[gd_scene load_steps=9 format=3 uid="uid://dtfxvsnn4h17s"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_c2diq"]
+[ext_resource type="Shader" path="res://Shaders/invert.gdshader" id="2_breke"]
 [ext_resource type="Texture2D" uid="uid://bskfplnk7yh1y" path="res://Assets/Platformer/Characters/character_0024.png" id="2_mm2xp"]
 [ext_resource type="Texture2D" uid="uid://7sf1hodgup3t" path="res://Assets/Platformer/Characters/character_0025.png" id="3_j45wj"]
 [ext_resource type="Texture2D" uid="uid://dp3xidmy4l6l3" path="res://Assets/Platformer/Characters/character_0026.png" id="4_x637i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dmmov"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4yyn"]
+shader = ExtResource("2_breke")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jxfu6"]
 animations = [{
@@ -34,5 +38,6 @@ script = ExtResource("1_c2diq")
 shape = SubResource("CircleShape2D_dmmov")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_t4yyn")
 sprite_frames = SubResource("SpriteFrames_jxfu6")
 frame_progress = 0.268332

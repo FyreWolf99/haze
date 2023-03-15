@@ -8,41 +8,41 @@
 [ext_resource type="PackedScene" uid="uid://hbu7b40hkt3l" path="res://Scenes/enemy_spawner.tscn" id="2_obdkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftavm"]
-size = Vector2(14, 549)
+size = Vector2(423.25, 549)
 
 [node name="World4" type="Node2D"]
 
 [node name="Enemy" parent="." instance=ExtResource("1_c2sd8")]
-position = Vector2(522, 216)
+position = Vector2(504, 216)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("2_obdkr")]
 position = Vector2(18, 18)
 
+[node name="EnemySpawner5" parent="." instance=ExtResource("2_obdkr")]
+position = Vector2(270, 18)
+
 [node name="EnemySpawner2" parent="." instance=ExtResource("2_obdkr")]
-position = Vector2(522, 18)
+position = Vector2(531, 18)
+
+[node name="EnemySpawner6" parent="." instance=ExtResource("2_obdkr")]
+position = Vector2(531, 216)
 
 [node name="EnemySpawner3" parent="." instance=ExtResource("2_obdkr")]
 position = Vector2(522, 396)
 
+[node name="EnemySpawner7" parent="." instance=ExtResource("2_obdkr")]
+position = Vector2(270, 396)
+
 [node name="EnemySpawner4" parent="." instance=ExtResource("2_obdkr")]
 position = Vector2(18, 396)
 
-[node name="EnemySpawner5" parent="." instance=ExtResource("2_obdkr")]
-position = Vector2(18, 219)
-
-[node name="EnemySpawner6" parent="." instance=ExtResource("2_obdkr")]
-position = Vector2(270, 18)
-
-[node name="EnemySpawner7" parent="." instance=ExtResource("2_obdkr")]
-position = Vector2(522, 216)
-
 [node name="EnemySpawner8" parent="." instance=ExtResource("2_obdkr")]
-position = Vector2(270, 396)
+position = Vector2(18, 207)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("1_hc6jn")]
 
 [node name="CRTBlur" parent="." instance=ExtResource("2_donm0")]
-reset = true
+no_bitches = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(270, 207)
@@ -54,11 +54,11 @@ script = ExtResource("1_8jgdb")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-7, 207)
+position = Vector2(-209.5, 207)
 shape = SubResource("RectangleShape2D_ftavm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(547, 207)
+position = Vector2(751.625, 207)
 shape = SubResource("RectangleShape2D_ftavm")
 
 [node name="WorldUp" type="StaticBody2D" parent="."]
@@ -66,11 +66,11 @@ position = Vector2(414, 0)
 rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldUp"]
-position = Vector2(-7, 144)
+position = Vector2(-209.25, 144)
 shape = SubResource("RectangleShape2D_ftavm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldUp"]
-position = Vector2(421, 148.5)
+position = Vector2(628, 148.499)
 shape = SubResource("RectangleShape2D_ftavm")
 
 [editable path="CharacterBody2D/PlayerReUse"]
