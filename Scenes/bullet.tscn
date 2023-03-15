@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnali6l3fhy0y"]
+[gd_scene load_steps=6 format=3 uid="uid://bnali6l3fhy0y"]
 
 [ext_resource type="Texture2D" uid="uid://174r2ox4iyc7" path="res://Assets/Bullet.png" id="1_dejvv"]
 [ext_resource type="Shader" path="res://Shaders/invert.gdshader" id="1_sq7d3"]
@@ -7,9 +7,21 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hfgq3"]
 shader = ExtResource("1_sq7d3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d0bf"]
+size = Vector2(18, 18)
+
 [node name="Bullet" type="Sprite2D"]
 material = SubResource("ShaderMaterial_hfgq3")
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_dejvv")
 script = ExtResource("3_4yh6v")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_8d0bf")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
