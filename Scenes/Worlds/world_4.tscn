@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://66e5myn61exn"]
+[gd_scene load_steps=9 format=3 uid="uid://66e5myn61exn"]
 
 [ext_resource type="Script" path="res://Scripts/Players/PlayerTopDown.gd" id="1_8jgdb"]
 [ext_resource type="PackedScene" uid="uid://dtfxvsnn4h17s" path="res://Scenes/enemy.tscn" id="1_c2sd8"]
 [ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="1_f5o4l"]
 [ext_resource type="PackedScene" uid="uid://bm5eokat4kc21" path="res://Scenes/background_glitch.tscn" id="1_hc6jn"]
+[ext_resource type="Script" path="res://Scripts/world_4.gd" id="1_t630k"]
 [ext_resource type="PackedScene" uid="uid://cpd8f0wa8uw6k" path="res://Scenes/crt_blur.tscn" id="2_donm0"]
 [ext_resource type="PackedScene" uid="uid://hbu7b40hkt3l" path="res://Scenes/enemy_spawner.tscn" id="2_obdkr"]
 
@@ -11,6 +12,7 @@
 size = Vector2(423.25, 549)
 
 [node name="World4" type="Node2D"]
+script = ExtResource("1_t630k")
 
 [node name="Enemy" parent="." instance=ExtResource("1_c2sd8")]
 position = Vector2(504, 216)

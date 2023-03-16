@@ -2,7 +2,7 @@ extends Node2D
 
 const MIN_TIME = 2
 
-@onready var nigger = rand_from_seed(position.x * position.y)[0] / 2000000000.0
+@onready var nigger: float = float(rand_from_seed(position.x * position.y)[0]) / 2000000000.0
 @onready var timer = $Timer
 @onready var enemy_scn = preload("res://Scenes/enemy.tscn")
 

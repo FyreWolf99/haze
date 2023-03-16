@@ -14,6 +14,10 @@ func _physics_process(_delta):
 	var dir = (player.position - position).normalized()
 	velocity = dir * SPD
 	move_and_slide()
+	if velocity.x > 0:
+		sprite.flip_h = 1
+	elif velocity.x < 0:
+		sprite.flip_h = 0
 	
 	if position.x > 540 - 18:
 		position.x = 540 - 18
