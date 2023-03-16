@@ -25,7 +25,7 @@ BackgroundMusic="*res://Scripts/background_music.gd"
 window/size/viewport_width=540
 window/size/viewport_height=414
 window/size/mode=2
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [input]
 

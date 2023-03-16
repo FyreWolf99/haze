@@ -1,6 +1,6 @@
 extends "res://Scripts/AreaDoorTransition.gd"
 
-var ACCEL = 0;
+var ACCEL = 1;
 
 @onready var player = get_node("../../CharacterBody2D")
 @onready var lava_wall = get_node("../../LavaWall")
@@ -20,5 +20,5 @@ func on_body_continue():
 
 func _on_timer_timeout():
 	if is_camera_cunt:
-		ACCEL += 0.5
+		ACCEL += 1
 		lava_wall.material.set_shader_parameter("len", ACCEL / 10)

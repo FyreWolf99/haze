@@ -58,7 +58,7 @@ _data = {
 }
 
 [node name="Pixxelate And Delete" type="CanvasLayer"]
-layer = 69
+layer = 68
 script = ExtResource("1_m2lj2")
 
 [node name="Control" type="Control" parent="."]

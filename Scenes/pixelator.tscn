@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6ochxrnl65b"]
+
+[ext_resource type="Shader" path="res://Shaders/pixelator.gdshader" id="1_llw0n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1w455"]
+shader = ExtResource("1_llw0n")
+shader_parameter/WIDTH = 540.0
+shader_parameter/HEIGHT = 414.0
+
+[node name="Pixelator" type="CanvasLayer"]
+layer = 69
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 540.0
+offset_bottom = 414.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_1w455")
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 414.0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://8r7ysfjrpmn4"]
+[gd_scene load_steps=23 format=3 uid="uid://8r7ysfjrpmn4"]
 
 [ext_resource type="Script" path="res://Scripts/Players/BasicPlayer.gd" id="1_shxd1"]
 [ext_resource type="PackedScene" uid="uid://bqsw8bdb3pjch" path="res://Scenes/player_re_use.tscn" id="1_uy70p"]
+[ext_resource type="PackedScene" uid="uid://p6ochxrnl65b" path="res://Scenes/pixelator.tscn" id="2_ey6ur"]
 [ext_resource type="Texture2D" uid="uid://bm4kkci5gx05" path="res://Assets/PlatformerIndustrial/Tilemap/tilemap_packed.png" id="3_qlpvd"]
 [ext_resource type="Script" path="res://Scripts/AreaDoorTransition.gd" id="4_tiqem"]
 [ext_resource type="Texture2D" uid="uid://dpqkopfbnhtj7" path="res://Assets/Platformer/Tilemap/tiles_packed.png" id="5_0sumn"]
@@ -1044,6 +1045,8 @@ size = Vector2(20, 55)
 [node name="World1" type="Node2D"]
 
 [node name="Background Glitch" parent="." instance=ExtResource("5_lonpi")]
+
+[node name="Pixelator" parent="." instance=ExtResource("2_ey6ur")]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(180, 360)
